@@ -11,13 +11,13 @@ public class BottleSong {
                 word = "bottle";
             }
 
-            System.out.println(bottlesNum + " green" + word + ", hanging on the wall");
-            System.out.println(bottlesNum + " green" + word + ", hanging on the wall");
+            System.out.println(bottlesNum + " green " + word + ", hanging on the wall");
+            System.out.println(bottlesNum + " green " + word + ", hanging on the wall");
             System.out.println("And if one green bottle should accidentally fall, ");
             bottlesNum = bottlesNum - 1;
 
             if (bottlesNum > 0) {
-                System.out.println("There'll be " + bottlesNum + " green" + word + ", hanging on the wall");
+                System.out.println("There'll be " + bottlesNum + " green " + word + ", hanging on the wall");
             } else {
                 System.out.println("There'll be no green bottles, hanging on the wall");
             }
