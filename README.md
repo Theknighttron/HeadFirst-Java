@@ -81,6 +81,22 @@ Two uses of main:
 - And if you're running low on memory, The Garbage Collector will run, throw out the unreachable objects and free up the space
   to that the space can be reused.
 
+# Variables
+
+- Primitive
+- Object Reference
+
+> ### Primitive Types
+>
+> boolean -> (jvm-specifi) -> true or false<br>
+> char -> 16bits -> 0 to 65535<br>
+> byte -> 8bits -> -128 to 127<br>
+> short -> 16bits -> -32768 to 32768<br>
+> int -> 32bits -> -2147483648 to 2147483647<br>
+> long -> 64 bits -> huge to huge<br>
+> float -> 32bits -> varies<br>
+> double -> 64 bits -> varies<br>
+
 ### Terms:
 
 JVM -> Java Virtual Machine<br>
