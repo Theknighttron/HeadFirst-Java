@@ -1,7 +1,3 @@
-### Terms:
-
-JVM -> Java Virtual Machine
-
 ### The Way Java Works
 
     | Source |  ->  | Compiler  |   ->  |   Output(code) |  Virtual Machines |
@@ -66,3 +62,33 @@ class Button {
 ### An object
 
 > - The dot operator(.) gives you access to an object's state and behavior instances variables and methods.
+
+Two uses of main:
+
+- To test your real class
+- To launch / start your Java application
+
+### Java Garbage Collector
+
+- Each time an object is created in Java, it goes into an area of memory known as **The Heap**.
+  No matter when, where or how they're created - live on the heap.
+- The Java heap is actually called the **Garbage Collection Heap**
+- When you create an object, Java allocates memory space on the heap according to how much that particular object needs.
+- An object with 15 instance variables will probably need more space than an object with only two instance variables.
+- So how to you get an object out of the heap when you're done with it ??
+  Java manages that memory for you! When the JVM(Java Virtual Machine) can see that an object can never be used again
+  that object becomes eligible for garbage collection.
+- And if you're running low on memory, The Garbage Collector will run, throw out the unreachable objects and free up the space
+  to that the space can be reused.
+
+### Terms:
+
+JVM -> Java Virtual Machine<br>
+Jar file -> Java Archive
+
+### Q & A:
+
+- #### How can i bundle multiple file and run when running them?<br>
+  You can put all of your application files into .jar file that based on the pkzip format.
+  Then include a simple text file formatted as something called a **manifest**, that defines
+  which class in that jar holds the `main()` method that should run.
