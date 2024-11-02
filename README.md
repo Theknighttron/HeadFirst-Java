@@ -81,7 +81,7 @@ Two uses of main:
 - And if you're running low on memory, The Garbage Collector will run, throw out the unreachable objects and free up the space
   to that the space can be reused.
 
-# Variables
+### Variables
 
 - Primitive
 - Object Reference
@@ -96,6 +96,44 @@ Two uses of main:
 > long -> 64 bits -> huge to huge<br>
 > float -> 32bits -> varies<br>
 > double -> 64 bits -> varies<br>
+
+The java standard library includes lots of sophisticated data structure includes maps, tree, and sets,
+and arrays are great when you just want a quick, ordered, and efficient list of things.
+Arrays give you fast random access by letting you use and index position to get to any element in the array.
+
+> Note:<br>
+> Once you've declared an array, you can't put anything in it except things that are compatible array type.
+
+- Arguments are the things you pass into the methods.
+- Parameter is nothing more than a local variable. A variable with a type and a name that can be used inside the body of the method.
+
+> Note:<br>
+> Java is pass by value That means pass by copy
+
+## Getter and Setters
+
+- Getter and Setters are formally called Accessors and Mutators
+
+### Encapsulation
+
+    Encapsulation in Java is a fundamental concept in object-oriented programming (OOP)
+    that refers to the bundling of data and methods that operate on that data within a single unit,
+    which is called a class in Java.
+    Java Encapsulation is a way of hiding the implementation details of a class from outside access and
+    only exposing a public interface that can be used to interact with the class.
+
+    In Java, encapsulation is achieved by declaring the instance variables of a class as private,
+    which means they can only be accessed within the class.
+    To allow outside access to the instance variables,public methods called getters and setters are defined,
+    which are used to retrieve and modify the values of the instance variables, respectively.
+    By using getters and setters, the class can enforce its own data validation rules and ensure that its internal state remains consistent.
+
+> Instace variables always get a default value. If you don't explicitly assign a value to an instance variable
+> or don't call a setter instance variable still has a value.<br>
+> You don't have to initialize instance variables because they always have a default value.
+
+> Note:<br>
+> Instances variables are declared inside a class but not within a method WHILE Local variables are defined withing a method.
 
 ### Terms:
 
