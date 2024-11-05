@@ -135,10 +135,50 @@ Arrays give you fast random access by letting you use and index position to get 
 > Note:<br>
 > Instances variables are declared inside a class but not within a method WHILE Local variables are defined withing a method.
 
+### Developing a class:
+
+(Methodology/Process/Approach to writing code)
+
+- Figure out what the class is suppose to do
+- List the instance variables and methods
+- Write the prep code for the methods.
+- Write test code for the methods.
+- Implement the class
+- Test the Methods
+- Debug and reimplement as needed
+
+### The three things to write for each class:
+
+```
+  [ prep code ] -> [ test code ] -> [ real code ]
+```
+
+Prep code:<br>
+A form of pseudocode, to help you focus on the logic without stressing about syntax.
+
+Test code:<br>
+A class or methods that will test the real code and validate that it's doing the right thing.
+
+Real code:<br>
+The actual implementation of the class. This is where we write real java code.
+
+### Test-Driven Development
+
+Partial list of key ideas in TDD:
+
+1. Write the test code first
+2. Develop in iteration cycles
+3. Keep it(the code) simple
+4. Refactor (improve the code) whenever and wherever you notice the opportunity
+5. Don't release anything until it passes all the tests.
+6. Don't put in anything that's not in the spec(no matter how tempted you are to put in functionality "for the future" )
+7. No killer schedules; work regular hours
+
 ### Terms:
 
 JVM -> Java Virtual Machine<br>
-Jar file -> Java Archive
+Jar file -> Java Archive<br>
+TDD -> Test Driven Development
 
 ### Q & A:
 
@@ -146,3 +186,7 @@ Jar file -> Java Archive
   You can put all of your application files into .jar file that based on the pkzip format.
   Then include a simple text file formatted as something called a **manifest**, that defines
   which class in that jar holds the `main()` method that should run.
+
+```
+
+```
