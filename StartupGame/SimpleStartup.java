@@ -6,7 +6,6 @@ class SimpleStartup {
         locationCells = locs;
     }
 
-
     public String checkYourself(int guess) {
         String result = "miss";
 
