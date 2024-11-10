@@ -14,5 +14,19 @@ class Main {
         boolean isAlive = true;
 
 
+        while(isAlive) {
+
+            int guess  = helper.getUserInput("Enter a number: ");
+
+            String result = theStartup.checkYourself(guess);
+
+            numOfGuesses++;
+
+            if (result.equals("kills")) {
+                isAlive = false;
+                System.out.println("You took " + numOfGuesses + " guessess");
+            }
+        }
+
     }
 }
