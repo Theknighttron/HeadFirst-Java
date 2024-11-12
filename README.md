@@ -174,6 +174,21 @@ Partial list of key ideas in TDD:
 6. Don't put in anything that's not in the spec(no matter how tempted you are to put in functionality "for the future" )
 7. No killer schedules; work regular hours
 
+### Regular (non-enhanced loops)
+
+for (int i = 0; i < 100; i++) {}
+
+---
+
+int i = 0;
+while (i < 8) {
+i++;
+}
+
+### Enhanced for loops
+
+for (String name : nameArray) {}
+
 ### Terms:
 
 JVM -> Java Virtual Machine<br>
