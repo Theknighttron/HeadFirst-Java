@@ -29,7 +29,7 @@ public class StartupBust {
         // Place each startup on random locations
         for(Startup startup: startups) {
             ArrayList<String> newLocations = helper.placeStartup(3);
-            startup.setLocationCells(newLocation);
+            startup.setLocationCells(newLocations);
         }
     }
 
