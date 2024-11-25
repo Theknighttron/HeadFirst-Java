@@ -41,4 +41,25 @@ public class StartupBust {
         }
         finishGame();
     }
+
+    private void checkUserGuess(String userGuess) {
+        numOfGuesses++;
+        String result = "miss";
+
+        for (Startup starupToTest : startups) {
+            result = startupToTest.checkYourSelf(userGuess);
+
+            if (result.equals("hit")) {
+                break;
+            }
+
+            if (result.equals("kill")) {
+                startups.remove(startupToTest);
+                break;
+            }
+        }
+
+
+        System.out.println(result);
+    }
 }
