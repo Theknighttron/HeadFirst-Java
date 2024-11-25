@@ -62,4 +62,15 @@ public class StartupBust {
 
         System.out.println(result);
     }
+
+    private void finishGame() {
+        System.out.println("All startups are dead! Your stock is now worthless");
+        if (numOfGuesses <= 18) {
+            System.out.println("It only took you " + numOfGuesses + " guesses.");
+            System.out.println("You got out before your options sank.");
+        } else {
+            System.out.println("Took you long enough. " + numOfGuesses + " guesses.");
+            System.out.println("Fish are dancing with your options");
+        }
+    }
 }
