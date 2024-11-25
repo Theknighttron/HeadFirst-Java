@@ -42,6 +42,7 @@ public class StartupBust {
         finishGame();
     }
 
+
     private void checkUserGuess(String userGuess) {
         numOfGuesses++;
         String result = "miss";
@@ -63,6 +64,7 @@ public class StartupBust {
         System.out.println(result);
     }
 
+
     private void finishGame() {
         System.out.println("All startups are dead! Your stock is now worthless");
         if (numOfGuesses <= 18) {
@@ -72,5 +74,12 @@ public class StartupBust {
             System.out.println("Took you long enough. " + numOfGuesses + " guesses.");
             System.out.println("Fish are dancing with your options");
         }
+    }
+
+
+    public static void main(String[] args) {
+        StartupBust game = new StartupBust();
+        game.setUpGame();
+        game.startPlaying();
     }
 }
