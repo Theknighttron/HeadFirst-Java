@@ -47,7 +47,7 @@ public class StartupBust {
         numOfGuesses++;
         String result = "miss";
 
-        for (Startup starupToTest : startups) {
+        for (Startup startupToTest : startups) {
             result = startupToTest.checkYourSelf(userGuess);
 
             if (result.equals("hit")) {

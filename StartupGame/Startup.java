@@ -13,7 +13,7 @@ class Startup {
         name = n;
     }
 
-    public String checkYourself(String userInput) {
+    public String checkYourSelf(String userInput) {
         String result = "miss";
 
         // check if the user guess is in arraylist

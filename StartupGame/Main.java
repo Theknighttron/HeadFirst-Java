@@ -22,7 +22,7 @@ class Main {
 
         while(isAlive) {
             String guess = helper.getUserInput("Enter a number ");
-            String result = theStartup.checkYourself(guess);
+            String result = theStartup.checkYourSelf(guess);
             numOfGuesses++;
 
             if (result.equals("kill")) {
