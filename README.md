@@ -189,6 +189,42 @@ i++;
 
 for (String name : nameArray) {}
 
+### Overloading
+
+Method Overloading is nothing more than having two methods with the same name but different arguments list.
+It has nothing to do with inheritance and polymorphism.
+
+An interface it's a 100% abstract class.
+What's an abstract class - it's a class that can't be instantiated.
+
+To stop a class from being instantiated use the word **abstract**. The Compiler will stop any code, anywhere from
+from ever creating an instance of that type.
+
+```
+abstract class Canine extends Animal {
+    public void roam(){}
+}
+```
+
+An abstract class has virtually no use, no value, no purpose in life unless its extended.
+With an abstract class, it's the **instance of the subclass** of your abstract class that's doing the work at runtime.
+
+Concrete class is a class that it's not abstract.
+
+### Abstract methods
+
+- An abstract method means the method must be overridden.
+- An abstract method has no body;
+  `public abstract void eat();` -- No method body so it ends with a semicolon
+- if you declare an abstract method, you must mark the class abstract as well. You can't have an abstract method in a non-abstract class.
+- but you can mix both abstract and non-abstract method in the abstract class.
+- You must implement all abstract methods.
+
+Note:
+
+> Every class in a Java extends class object
+> Class Object is a mother of all classes; it's the superclass of everything.
+
 ### Terms:
 
 JVM -> Java Virtual Machine<br>
