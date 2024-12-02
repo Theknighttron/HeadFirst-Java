@@ -225,6 +225,73 @@ Note:
 > Every class in a Java extends class object
 > Class Object is a mother of all classes; it's the superclass of everything.
 
+### Multiple inheritance
+
+The Deadly Diamond Of Death -> Refers to one class having two super classes.
+
+### Java interface
+
+A Java interface solves your multiple problem by giving you much of the polymorphism benefits
+of multiple inheritance without the pain and suffering from the Deadly Diamond of Death(DDD).
+
+The way interface solve the DDD problem is **by making all the methods abstract** that way
+the subclass must implement the methods. So that at runtime the JVM ins't confused about
+which of the two inherited version it's supposed to call.
+
+A java interface is like a 100% pure abstract class.
+
+> To define an interface:
+
+    `public interface Pet`
+
+> To implement an interface:
+
+    `public class Dog extends Canine Implement Pet {...}`
+
+### Making and Implementing the interface
+
+Note:
+
+> Interface methods are implicitly **public and abstract**
+> It's optional (in fact it's not considered good style) to type the words in.
+
+    ```
+    public interface Pet {
+        public abstract void beFriendly();
+        public abstract void play();
+    }
+    ```
+
+    ```
+    public class Dog extends Canine implements Pet {
+        // Methods implementing the Pet interface
+        public void beFriendly() {...}
+        public void play() {...}
+
+        // Normall overriding methods
+        public void roam() {...}
+        public void eat() {...}
+    }
+    ```
+
+Note:
+
+> Single Parents Only: A java class can have only one parent (superclass)
+> and that parent class defines who you are. But you can implement multiple interfaces and
+> those interfaces defines roles you can play.
+
+### How do you know whether to make a class, a subclass, an abstract class or an interface.
+
+- Make **a class** that doesn't extends(other than objects) when your new class doesn't pass the IS-A test for any other type.
+
+- Make **a subclass** (in other words, extends a class) only when you need to make a more specific version of a class and need to override
+  or add new behavior.
+
+- Use **an abstract class** when you want to define a template for a group of subclasses, and you have at least some implementation code that
+  all subclasses could use. Make the class abstract when you want to guarantee that nobody can make objects of that type.
+
+- Use **an interface** when you want to define a role that other classes can play, regardless of where those classes are in the inheritance tree.
+
 ### Terms:
 
 JVM -> Java Virtual Machine<br>
@@ -237,7 +304,3 @@ TDD -> Test Driven Development
   You can put all of your application files into .jar file that based on the pkzip format.
   Then include a simple text file formatted as something called a **manifest**, that defines
   which class in that jar holds the `main()` method that should run.
-
-```
-
-```
