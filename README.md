@@ -1,3 +1,32 @@
+### The Basics:
+
+- #### Variables in Java
+
+Variable in java is a data container that stored data valued during java program execution.<br>
+`int count`
+
+##### Types of variable in java
+
+1. Local Variables
+   Variables that are declared inside the body of the method.
+2. Instance Variables
+   Variables that are declared outside any method, constructor or block.
+   There defined without the static keyword.
+3. Static Variables
+   Variables that are initialized only once, at the time of of class loading before
+   the execution of the program starts.
+   There Shared among all instance of a class.
+
+##### What is data types in java
+
+Are defined as specifier that allocates different sizes and types of a value that a variable can store.
+
+1. Primitive Types - (Integer, Character, Boolean, Float)
+2. Non Primitive Types - (Classes, Arrays, Interfaces)
+
+> Note:
+> Java is a statically-typed language which means that all variables must be declared before it's used.
+
 ### The Way Java Works
 
     | Source |  ->  | Compiler  |   ->  |   Output(code) |  Virtual Machines |
@@ -291,6 +320,40 @@ Note:
   all subclasses could use. Make the class abstract when you want to guarantee that nobody can make objects of that type.
 
 - Use **an interface** when you want to define a role that other classes can play, regardless of where those classes are in the inheritance tree.
+
+## Stack And Garbage Collector
+
+When the JVM(Java Virtual Machine) Starts up, it get a chunk of memory from the underlying OS and uses it to run your java program.
+
+- How much memory ?
+- And whether on not you can tweak it depended on which version of the JVM you're running.
+
+Programmers care about the area of memory where:
+
+- Object lives **(the heap)**
+- Method invocations and local variables live **(the stack)**
+
+All object live on the garbage-collectible heap
+
+Note:
+
+> Local variables are also called **Stack variables**
+
+Instance variables - are declared inside a class but not inside a method, they represent the "fields" that each individual object has.
+Local variables - are declared inside a method including method parameters. They're temporary and live as only as long as the method in on the stack.
+
+    A call stakck with two methods:
+
+                [ bar() {s} ] <- Stack Frames
+                [ foo() {x}{i}{b} ] <-  Stack  Frames
+
+    The method on top of the the stack is always the currently executing method.
+
+What about local variables that are objects?
+A non primitive variable hold a reference to an object and not object itself.
+If the local variable is a reference to an object, only the local variable is a reference to an object, only the variable goes on the stack.
+
+No matter WHERE the object reference variable is declared the object always, always and always goes on the heap.
 
 ### Terms:
 
