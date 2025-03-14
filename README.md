@@ -355,6 +355,76 @@ If the local variable is a reference to an object, only the local variable is a 
 
 No matter WHERE the object reference variable is declared the object always, always and always goes on the heap.
 
+## Multithreaded Programming
+
+Refers to two or more parts that run concurrently --> (thread)
+
+Project Based Multitasking -> is a feature that allows your computer to run two or more programs concurrently.
+Thread Based Multitasking --> This means that a single program can perform two or more task simultaneously.
+
+The Main Thread:
+
+- It is the thread from which other "child" threads will be spawned.
+- Often, it must be the last thread to finish execution because it performs various shutdown actions.
+
+`static Thread currentThread()`
+
+Creating a Thread:
+
+- You can implement the Runnable interface
+
+```
+class NewThread implement Runnable {
+    Thread t;
+
+    NewThread() {
+        t = new Thread(this, "My Thread")   // Create a new second thread
+    }
+
+    // This is the entry point
+    public void run() {
+
+    }
+}
+
+class ThreadDemo {
+    public static void main(String args[]) {
+        NewThread nt = new NewThread(); // Create a new thread
+        nt.t.start() // Start the thread
+    }
+}
+```
+
+- You can extend the Thread class
+
+```
+class NewThread extends Thread {
+    NewThread() {
+        // Create a new second thread
+        super("Demo Thread")
+    }
+
+    // This is the entry point for the second thread
+    public void run() {
+
+    }
+}
+
+class ExtendThread {
+    public static void main(String args[]) {
+        NewThread nt = new NewThread(); // create a thread
+        nt.start(); // start the thread
+    }
+}
+```
+
+To check if a thread has finish running:
+
+- isAlive()
+  `final boolean isAlive()`
+- join()
+  `final void join() throws InterruptedException`
+
 ### Terms:
 
 JVM -> Java Virtual Machine<br>
